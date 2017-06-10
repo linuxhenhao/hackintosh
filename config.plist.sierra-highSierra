@@ -59,6 +59,11 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+        <key>FakeId</key>
+        <dict>
+            <key>IntelGFX</key>
+            <string>0x04128086</string>
+        </dict>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
@@ -148,7 +153,7 @@
 			<false/>
 		</dict>
         <key>ig-platform-id</key>
-        <string>0x01620005</string>
+        <string>0x0a260006</string>
 		<key>NvidiaSingle</key>
 		<false/>
 	</dict>
