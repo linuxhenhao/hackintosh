@@ -32,14 +32,19 @@
 				<string>CpuPm</string>
 			</dict>
 		</array>
-        <key>HaltEnabler</key>
-        <true/>
+		<key>HaltEnabler</key>
+		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
 			<true/>
 			<key>Generate</key>
-            <true/>
+			<dict>
+				<key>CStates</key>
+				<true/>
+				<key>PStates</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
@@ -91,21 +96,12 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>RtVariables</key>
-	<dict>
-		<key>BooterConfig</key>
-		<string>0x28</string>
-		<key>CsrActiveConfig</key>
-		<string>0x13</string>
-	</dict>
 	<key>DisableDrivers</key>
 	<array>
 		<string>Nothing</string>
 	</array>
 	<key>GUI</key>
 	<dict>
-       <key>ScreenResolution</key>
-       <string>1920x1080x32</string>
 		<key>Hide</key>
 		<array>
 			<string>Windows</string>
@@ -130,9 +126,13 @@
 			<true/>
 			<key>Legacy</key>
 			<false/>
+			<key>Linux</key>
+			<true/>
 			<key>Tool</key>
 			<false/>
 		</dict>
+		<key>ScreenResolution</key>
+		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>black_green</string>
 	</dict>
@@ -147,15 +147,15 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
-        <key>ig-platform-id</key>
-        <string>0x0d220003</string>
+		<key>ig-platform-id</key>
+		<string>0x0a260006</string>
 		<key>NvidiaSingle</key>
 		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleRTC</key>
-		<true/>
+		<false/>
 		<key>AsusAICPUPM</key>
 		<false/>
 		<key>Debug</key>
@@ -169,8 +169,14 @@
 		<key>KernelPm</key>
 		<false/>
 		<key>KextsToPatch</key>
-		<array>
-		</array>
+		<array/>
+	</dict>
+	<key>RtVariables</key>
+	<dict>
+		<key>BooterConfig</key>
+		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x13</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
