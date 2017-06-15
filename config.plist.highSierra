@@ -32,20 +32,25 @@
 				<string>CpuPm</string>
 			</dict>
 		</array>
+		<key>HaltEnabler</key>
+		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
-			<false/>
+			<true/>
 			<key>Generate</key>
-			<false/>
-			<key>PLimitDict</key>
-			<integer>0</integer>
-			<key>UnderVoltStep</key>
-			<integer>0</integer>
+			<dict>
+				<key>CStates</key>
+				<true/>
+				<key>PStates</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
+		<key>Arguments</key>
+		<string>-lilubeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -64,14 +69,14 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>No</string>
+			<string>1</string>
 		</dict>
 		<key>FakeID</key>
 		<dict>
 			<key>ATI</key>
 			<string>0x0</string>
 			<key>IntelGFX</key>
-			<string>0x0</string>
+			<string>0x04128086</string>
 			<key>LAN</key>
 			<string>0x0</string>
 			<key>NVidia</key>
@@ -92,13 +97,6 @@
 			<key>Inject</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>RtVariables</key>
-	<dict>
-		<key>BooterConfig</key>
-		<string>0x28</string>
-		<key>CsrActiveConfig</key>
-		<string>0x13</string>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -130,9 +128,13 @@
 			<true/>
 			<key>Legacy</key>
 			<false/>
+			<key>Linux</key>
+			<true/>
 			<key>Tool</key>
 			<false/>
 		</dict>
+		<key>ScreenResolution</key>
+		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>black_green</string>
 	</dict>
@@ -147,15 +149,17 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>ig-platform-id</key>
+		<string>0x0a260006</string>
 		<key>NvidiaSingle</key>
 		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleRTC</key>
-		<true/>
+		<false/>
 		<key>AsusAICPUPM</key>
-		<true/>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>KernelCpu</key>
@@ -167,29 +171,19 @@
 		<key>KernelPm</key>
 		<false/>
 		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>External icons patch</string>
-				<key>Find</key>
-				<data>
-				RXh0ZXJuYWw=
-				</data>
-				<key>Name</key>
-				<string>AppleAHCIPort</string>
-				<key>Replace</key>
-				<data>
-				SW50ZXJuYWw=
-				</data>
-			</dict>
-		</array>
+		<array/>
+	</dict>
+	<key>RtVariables</key>
+	<dict>
+		<key>BooterConfig</key>
+		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x13</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>Trust</key>
 		<false/>
-        <key>FirmwareFeatures</key>
-        <string>0xC0001403</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
@@ -198,56 +192,5 @@
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
-</dict>
-<key>GUI</key>
-<dict>
-   <key>Custom</key>
-   <dict>
-      <key>Entries</key>
-      <array>
-         <dict>
-            <key>AddArguments</key>
-            <string>root=UUID=85780e57-4798-41f2-8845-7bf3606b83ce rw add_efi_memmap initrd=/EFI/ubuntu/initrd.img-4.5.0</string>
-            <key>Disabled</key>
-            <false/>
-            <key>FullTitle</key>
-            <string>Arch Linux</string>
-            <key>Hidden</key>
-            <false/>
-            <key>Ignore</key>
-            <false/>
-            <key>Path</key>
-            <string>/EFI/ubuntu/vmlinuz-4.5.0</string>
-            <key>Type</key>
-            <string>Linux</string>
-            <key>Volume</key>
-            <string>EFI</string>
-            <key>VolumeType</key>
-            <string>Internal</string>
-         </dict>
-         <dict>
-             <key>Disabled</key>
-             <false/>
-             <key>Volume</key>
-             <string>EFI</string>
-             <key>VolumeType</key>
-             <string>Internal</string>
-             <key>Path</key>
-             <string>/EFI/Microsoft/Boot/bootmgfw.efi</string>
-             <key>Path</key>
-             <key>Title</key>
-             <string>Win7</string>
-             <key>FullTytle</key>
-             <string>Windows7</string>
-             <key>Hidden</key>
-             <false/>
-             <key>Ignore</key>
-             <false/>
-      </array>
-   </dict>
-   <key>ScreenResolution</key>
-   <string>1920x1080</string>
-   <key>Theme</key>
-   <string>bootcamp</string>
 </dict>
 </plist>
