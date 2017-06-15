@@ -49,6 +49,8 @@
 	</dict>
 	<key>Boot</key>
 	<dict>
+		<key>Arguments</key>
+		<string>-lilubeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -67,14 +69,14 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>No</string>
+			<string>1</string>
 		</dict>
 		<key>FakeID</key>
 		<dict>
 			<key>ATI</key>
 			<string>0x0</string>
 			<key>IntelGFX</key>
-			<string>0x0</string>
+			<string>0x04128086</string>
 			<key>LAN</key>
 			<string>0x0</string>
 			<key>NVidia</key>
