@@ -12,6 +12,25 @@
 			<false/>
 			<key>ReuseFFFF</key>
 			<false/>
+            <key>Patches</key>
+                <array>
+                    <dict>
+                        <key>Comment</key>
+                        <string>GFX0 to IGPU, do before pegp2gfx0, think why</string>
+                        <key>Find</key>
+                        <data>R0ZYMA==</data>
+                        <key>Replace</key>
+                        <data>SUdQVQ==</data>
+                    </dict>
+                    <dict>
+                        <key>Comment</key>
+                        <string>PEGP to GFX0</string>
+                        <key>Find</key>
+                        <data>UEVHUA==</data>
+                        <key>Replace</key>
+                        <data>R0ZYMA==</data>
+                    </dict>
+                </array>
 		</dict>
 		<key>DropTables</key>
 		<array>
@@ -37,7 +56,7 @@
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
-			<true/>
+			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
@@ -50,7 +69,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-lilubeta</string>
+		<string>-lilubeta -alcbeta -igfxbeta </string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -69,7 +88,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>1</string>
+			<string>11</string>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -136,7 +155,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>black_green</string>
+		<string>metal</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -184,6 +203,8 @@
 	<dict>
 		<key>Trust</key>
 		<false/>
+        <key>FirmwareFeatures</key>
+        <string>0xFC0FE13E</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
