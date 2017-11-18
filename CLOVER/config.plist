@@ -12,25 +12,17 @@
 			<false/>
 			<key>ReuseFFFF</key>
 			<false/>
-            <key>Patches</key>
-                <array>
-                    <dict>
-                        <key>Comment</key>
-                        <string>GFX0 to IGPU, do before pegp2gfx0, think why</string>
-                        <key>Find</key>
-                        <data>R0ZYMA==</data>
-                        <key>Replace</key>
-                        <data>SUdQVQ==</data>
-                    </dict>
-                    <dict>
-                        <key>Comment</key>
-                        <string>PEGP to GFX0</string>
-                        <key>Find</key>
-                        <data>UEVHUA==</data>
-                        <key>Replace</key>
-                        <data>R0ZYMA==</data>
-                    </dict>
-                </array>
+		    <key>Patches</key>
+			<array>
+			    <dict>
+				<key>Comment</key>
+				<string>GFX0 to GFX1, do before pegp2gfx0, think why</string>
+				<key>Find</key>
+				<data>R0ZYMA==</data>
+				<key>Replace</key>
+				<data>R0ZYMQ==</data>
+			    </dict>
+			</array>
 		</dict>
 		<key>DropTables</key>
 		<array>
@@ -56,7 +48,7 @@
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
-			<false/>
+			<true/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
@@ -170,6 +162,8 @@
 		</dict>
 		<key>ig-platform-id</key>
 		<string>0x0a260006</string>
+		<key>RadeonDeInit</key>
+		<true/>
 		<key>NvidiaSingle</key>
 		<false/>
 	</dict>
